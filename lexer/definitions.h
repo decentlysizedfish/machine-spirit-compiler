@@ -1,10 +1,23 @@
 // definitions enums and structures used in the lexer
-//
-// Lists all libraries
-// libraries are declared here and will be imported into executable files via this header
+
 #include <stdio.h> // input and output
 #include <stdlib.h> // memory management
 #include <ctype.h> // character mod and utility
 #include <string.h> 
 
-// reset
+typedef enum {
+    TOK_KEYWORD,
+    TOK_OPERATOR,
+    TOK_IDENTIFIER,
+    TOK_PUNCTUATION,
+    TOK_LITERAL
+} tok_type_t;
+
+typedef struct {
+    tok_type_t tok;
+    // points to the starting character in file buffer
+    const char *start; 
+    int length;
+    int line;
+} tok_t;
+
