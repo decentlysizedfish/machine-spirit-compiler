@@ -1,0 +1,3 @@
+- Look into c libraries more
+- h files in _include_
+- main c files will be stored in _src_

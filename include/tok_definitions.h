@@ -1,9 +1,7 @@
-// definitions enums and structures used in the lexer
+#ifndef TOK_DEFINITIONS_H
+#define TOK_DEFINITIONS_H
 
-#include <stdio.h> // input and output
-#include <stdlib.h> // memory management
-#include <ctype.h> // character mod and utility
-#include <string.h> 
+// idk what all libraries i need atm, so now we have none
 
 typedef enum {
     TOK_KEYWORD,
@@ -12,7 +10,7 @@ typedef enum {
     TOK_PUNCTUATION,
     TOK_LITERAL
 } tok_type_t;
-
+ 
 typedef struct {
     tok_type_t tok;
     // points to the starting character in file buffer
@@ -21,3 +19,4 @@ typedef struct {
     int line;
 } tok_t;
 
+#endif
