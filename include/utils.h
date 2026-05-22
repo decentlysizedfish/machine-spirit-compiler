@@ -4,8 +4,7 @@
 // may need more libs laterss
 #include <stdlib.h>
 
-typedef struct utils
-{
+typedef struct {
     void *array;
     size_t curr;
     size_t capacity;

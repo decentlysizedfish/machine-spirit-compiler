@@ -1,10 +1,11 @@
 # Compiler + flags
 CC := clang
 CFLAGS := -Wall -Wextra -Werror -Iinclude
+DEPS = .include
+OBJ := .src
 TARGET := bin/mspirit
 
-# Dirs
-SRC_DIR := src
-BIN_DIR := bin
 
-SRCS := $(wildcard)
+compmake: $(OBJ)/main.o $(OBJ)/lexer.o $(OBJ)/parser.o
+	$(CC) -o $(TARGET) $^ $(CFLAGS)
+	// ahh
